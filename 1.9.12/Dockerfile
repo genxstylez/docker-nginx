@@ -33,4 +33,4 @@ WORKDIR /etc/nginx
 
 EXPOSE 80 443
 
-CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
