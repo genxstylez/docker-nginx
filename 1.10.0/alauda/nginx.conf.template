@@ -90,7 +90,7 @@ http {
         client_body_buffer_size 256k;
 
 
-        listen 1443 default_server;
+        listen      1443 default_server;
 
         server_name _;
         #means catch-all
