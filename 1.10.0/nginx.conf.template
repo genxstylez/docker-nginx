@@ -87,6 +87,7 @@ http {
 
         server_name _;
         #means catch-all
+        return 301 https://$host$request_uri;
 
         charset utf-8;
 
