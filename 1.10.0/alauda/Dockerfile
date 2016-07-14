@@ -1,2 +1,5 @@
 FROM        index.alauda.cn/library/nginx:1.10.0-alpine
-COPY        nginx.conf /etc/nginx/nginx.conf
+
+RUN         apk add gettext
+
+COPY        nginx.conf.template /etc/nginx/nginx.conf.template
