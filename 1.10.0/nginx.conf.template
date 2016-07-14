@@ -80,7 +80,7 @@ http {
 
     server {
        listen         80;
-       server_name    _;
+       server_name    ${SERVER_NAME};
        return         301 https://$host$request_uri;
     }
 
@@ -91,7 +91,7 @@ http {
 
         listen 1443 default_server;
 
-        server_name _;
+        server_name ${SERVER_NAME};
         #means catch-all
 
         charset utf-8;
