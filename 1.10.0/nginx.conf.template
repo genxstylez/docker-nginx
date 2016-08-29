@@ -1,3 +1,4 @@
+daemon off;
 user  nobody;
 worker_processes  auto;
 
@@ -7,9 +8,7 @@ events {
     worker_connections  8000;
 }
 
-
 http {
-
     include mime.types;
     default_type  application/octet-stream;
 
@@ -84,12 +83,14 @@ http {
        return         301 https://$host$request_uri;
     }
 
+
     server {
         client_max_body_size 10M;
         client_body_temp_path /tmp 1 2;
         client_body_buffer_size 256k;
 
-        listen 1443 default_server;
+
+        listen      1443 default_server;
 
         server_name ${SERVER_NAME};
         #means catch-all
