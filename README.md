@@ -1,4 +1,4 @@
 docker-nginx
 ============
 
-alpine based nginx container
+alpine:edge based nginx container
