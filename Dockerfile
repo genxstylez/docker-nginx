@@ -32,12 +32,8 @@ VOLUME      ["/var/log/nginx"]
 
 WORKDIR     /etc/nginx
 
-COPY        nginx.conf.template /etc/nginx/nginx.conf.template
+COPY        nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE      80 443
-
-COPY        docker-entrypoint.sh /
-
-ENTRYPOINT  ["sh", "/docker-entrypoint.sh"]
+EXPOSE      80
 
 CMD         ["nginx", "-g", "daemon off;"]
